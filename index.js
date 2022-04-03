@@ -43,7 +43,7 @@ const storage=multer.diskStorage({
 const upload=multer({storage:storage});
 
 app.post("/api/upload",upload.single('file'),(req,res)=>{
-  res.status(200).json("file uploaded");
+  res.status(200).json("file uploaded ok");
 })
 
 app.listen('5000',()=>{
